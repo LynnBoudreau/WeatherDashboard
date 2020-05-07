@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather Dashboard</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+  <body>
+    <!-- Retrieved data will be dumped here -->
+    <div class="city"></div>
+    <div class="wind"></div>
+    <div class="humidity"></div>
+    <div class="temp"></div>
+    <div class="tempF"></div>
+    <div class="UVIndex"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      // This is our API key. Add your own API key between the ""
+      var APIKey = "0f86381e892cb59b592590e413e1d1c7";
 
-<body>
-    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
-    <script>
-        var date = moment().add(7, 'days');
-        var 
-        console.log(date);
+      // Here we are building the URL we need to query the database
+      var queryURL =
+        "https://api.openweathermap.org/data/2.5/weather?q=${city},${state}&appid=${0f86381e892cb59b592590e413e1d1c7}";
+
+      // We then created an AJAX call
+
+      $.ajax({
+        url: queryURL,
+        method: "GET",
+      }).then(function (response) {
+        console.log(response);
+
+        // Create CODE HERE to Log the queryURL
+        // Create CODE HERE to log the resulting object
+
+        // Create CODE HERE to calculate the temperature (converted from Kelvin)
+        var city = response.name;
+        var wind = response.wind.speed;
+        var humidity = response.main.humidity;
+        var temp = response.main.temp;
+        var tempF = response.main.tempF;
+        var UVIndex = response.main.UVIndex;
+        // Create CODE HERE to transfer content to HTML
+        $(".city").text(`City: ${city}`);
+        +":" + city;
+        $(".wind").text(`Wind: ${wind}`);
+        +":" + wind;
+        $(".min").text(`Min: ${min}`);
+        +":" + min;
+        $(".max").text(`Max: ${max}`);
+        +":" + max;
+        $(".uvIndex").text(`lat: ${lat}`);
+        +":" + lat;
+        $(".uvIndex").text(`lon: ${lon}`);
+        +":" + lon;
+        // Hint: To convert from Kelvin to Fahrenheit: F = (K - 273.15) * 1.80 + 32
+
+        // Create CODE HERE to dump the temperature content into HTML
+        $(".temp").text("temperature");
+      });
     </script>
-
-        //  an input to allow the user to search for the city
-
-        //  grab the users input and store it in a variable (userSearch)
-
-        //  create a function that gets the current weather (Current Weather Data Call)
-        
-
-        //  dynamically generate current weather div
-
-        //  inside of that youre going to generate the city, date, temperature, humidity, wind speed
-        //  youre going to call the getUVIndex function to generate the UV Index element
-
-        //  
-
-    </script>
-
-</body>
-
+  </body>
 </html>
