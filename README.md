@@ -1,16 +1,13 @@
 # WeatherDashboard # 06 Server-Side APIs: Weather Dashboard
 
-Homework Assignment #6
-// an input to allow the user to search for the city
+# Homework Assignment #6
 
-        //  grab the users input and store it in a variable (userSearch)
+# Installation: Completed May 17, 2020 at 10:55 pm eastern
 
-        //  create a function that gets the current weather (Current Weather Data Call)
+# Link to published page: https://lynnboudreau.github.io/WeatherDashboard/
 
+# Usage: A light app that generates weather information based upon user input of their city.
 
-        //  dynamically generate current weather div
+# Credits: Utilized Bootstrap, FontAwesome, OpenWeatherAPI, and lastly, Lynn Boudreau, Student Coder
 
-        //  inside of that youre going to generate the city, date, temperature, humidity, wind speed
-        //  youre going to call the getUVIndex function to generate the UV Index element
-
-        //
+# Licenses: MIT
