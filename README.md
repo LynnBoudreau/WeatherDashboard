@@ -1,4 +1,4 @@
-# WeatherDashboard # 06 Server-Side APIs: Weather Dashboard
+* WeatherDashboard # 06 Server-Side APIs: Weather Dashboard
 
 # Homework Assignment #6
 
